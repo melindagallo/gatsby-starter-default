@@ -16,7 +16,7 @@ class ToggleButton extends React.Component {
   toggle = (props) => {
     this.setState({ color: !this.state.color });
   }
-  render = props => (
+  render = () => (
     <button type="button" 
     className={this.state.color ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
@@ -30,7 +30,7 @@ const SecondPage = (props) => (
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
-    <p className={props.color ? 'display' : 'nodisplay'}>Welcome to page 2 - latest</p>
+    <p className={this.state.color ? 'display' : 'nodisplay'}>Welcome to page 2 - latest</p>
     <ToggleButton />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
