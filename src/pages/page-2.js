@@ -30,7 +30,7 @@ const SecondPage = (props) => (
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
-    <p className={this.state.color ? 'display' : 'nodisplay'}>Welcome to page 2</p>
+    <p className={this.color ? 'display' : 'nodisplay'}>Welcome to page 2</p>
     <ToggleButton />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
