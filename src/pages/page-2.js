@@ -4,11 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const StyledFaqAnswer = styled.div`
-	.question {
-		display: ${props => (props.expandButton ? "block" : "none")};
-	}
-`
 
 class ToggleButton extends React.Component {
    constructor(props) {
@@ -21,7 +16,8 @@ class ToggleButton extends React.Component {
   toggle = () => {
     this.setState({ expandButton: !this.state.expandButton });
   }
-  render = (props) => (
+  render = () => (
+    <p className=className={this.state.expandButton ? 'ExpandClass' : 'ContractClass'}>What is this?</p>
     <button type="button" 
     className={this.state.expandButton ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
@@ -31,12 +27,11 @@ class ToggleButton extends React.Component {
 }
 
 
-const SecondPage = (props) => (
+const SecondPage = () => (
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2 - testing class</p>
-    <p className="question">My description My description My description My description My description My description </p>
     <ToggleButton />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
