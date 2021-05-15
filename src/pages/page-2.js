@@ -4,23 +4,28 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+const StyledFaqAnswer = styled.div`
+	.question {
+		display: ${props => (props.expandButton ? "block" : "none")};
+	}
+`
 
 class ToggleButton extends React.Component {
    constructor(props) {
    super(props);
    this.state = {
-     color: true
+     expandButton: true
    }
   }
   
   toggle = () => {
-    this.setState({ color: !this.state.color });
+    this.setState({ expandButton: !this.state.expandButton });
   }
   render = (props) => (
     <button type="button" 
-    className={this.state.color ? 'Mine Red' : 'Mine Blue'}
+    className={this.state.expandButton ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
-    Change color 
+    Expand or Collapse Button 
    </button>
   )
 }
@@ -30,7 +35,8 @@ const SecondPage = (props) => (
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
-    <p className={props.color ? 'display' : 'nodisplay'}>Welcome to page 2 - latest</p>
+    <p>Welcome to page 2 - testing class</p>
+    <p className="question">My description My description My description My description My description My description </p>
     <ToggleButton />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
