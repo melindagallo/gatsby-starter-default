@@ -31,7 +31,6 @@ const SecondPage = (props) => (
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2 - ANOTHER TEST</p>
-    <p className={{props.expandButton ? "block" : "none"}}>Tests to do tests to do</p>
     <ToggleButton />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
