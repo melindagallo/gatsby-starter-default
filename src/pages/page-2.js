@@ -16,14 +16,14 @@ class ToggleButton extends React.Component {
   toggle = () => {
     this.setState({ expandButton: !this.state.expandButton });
   }
-  render = () => {
+  render = () => (
      <button type="button" 
     className={this.state.expandButton ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
     Expand or Collapse Button 
    </button>
   )
-}
+
 
 
 const SecondPage = (props) => (
@@ -32,8 +32,6 @@ const SecondPage = (props) => (
     <h1>Second Page</h1>
     <p>Welcome to page 2</p>
     <ToggleButton />
-     <h2>Hopefully this is the final solution.</h2>
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 }
