@@ -17,7 +17,6 @@ class ToggleButton extends React.Component {
     this.setState({ expandButton: !this.state.expandButton });
   }
   render = () => (
-    <p className={this.state.expandButton ? 'ExpandClass' : 'ContractClass'} onClick={this.toggle.bind(this)}>What is this?</p>
     <button type="button" 
     className={this.state.expandButton ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
@@ -27,11 +26,12 @@ class ToggleButton extends React.Component {
 }
 
 
-const SecondPage = () => (
+const SecondPage = (props) => (
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
-    <p>Welcome to page 2 - testing class</p>
+    <p>Welcome to page 2 - ANOTHER TEST</p>
+    <p className="{this.state.expandButton ? 'Mine Red' : 'Mine Blue'}">Tests to do tests to do</p>
     <ToggleButton />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
