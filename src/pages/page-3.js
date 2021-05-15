@@ -17,14 +17,12 @@ class ToggleButton extends React.Component {
     this.setState({ color: !this.state.color });
   }
   render = props => (
-    return (
     <p>The color is {this.state.color ? 'Red' : 'Blue'} </p>
   <button type="button" 
     className={this.state.color ? 'Red' : 'Blue'}
     onClick={this.toggle.bind(this)}>
     Change color 
   </button>
-    )
   )
 }
 
