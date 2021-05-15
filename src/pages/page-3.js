@@ -10,33 +10,18 @@ class Faqs extends React.Component {
    constructor(props) {
    super(props);
    this.state = {
-     color: true
+     expand: true
    };
   }
   toggle = () => {
-    this.setState({ color: !this.state.color });
+    this.setState({ expand: !this.state.expand });
   }
   render = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-     <p className={this.state.color ? 'Red' : 'Blue'}>This is my {this.state.color ? 'Red' : 'Blue'} book.</p>
-        <button type="button" onClick={this.toggle.bind(this)}>Change color</button>
-
+    <h1>Testimg change button</h1>
+     <p className={this.state.expand ? 'Red' : 'Blue'}>This is my {this.state.expand ? 'Red' : 'Blue'} book.</p>
+        <button type="button" onClick={this.toggle.bind(this)}>Change Color</button>
   </Layout>
 )
 }
