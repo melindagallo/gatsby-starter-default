@@ -17,7 +17,7 @@ class ToggleButton extends React.Component {
     this.setState({ expandButton: !this.state.expandButton });
   }
   render = () => (
-    <p className={{this.state.expandButton ? 'ExpandClass' : 'ContractClass'}}>What is this?</p>
+    <p className={this.state.expandButton ? 'ExpandClass' : 'ContractClass'} onClick={this.toggle.bind(this)}>What is this?</p>
     <button type="button" 
     className={this.state.expandButton ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
