@@ -17,7 +17,11 @@ class ToggleButton extends React.Component {
     this.setState({ expandButton: !this.state.expandButton });
   }
   render = () => (
-    <button type="button" 
+    <h2
+     className={this.state.expandButton ? 'Mine Red' : 'Mine Blue'}
+     >
+     This is the header area</h2>
+     <button type="button" 
     className={this.state.expandButton ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
     Expand or Collapse Button 
@@ -29,8 +33,8 @@ class ToggleButton extends React.Component {
 const SecondPage = (props) => (
   <Layout>
     <Seo title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2 - ANOTHER TEST</p>
+    <h1>Second Page</h1>
+    <p>Welcome to page 2 - I hope final</p>
     <ToggleButton />
     <Link to="/">Go back to the homepage</Link>
   </Layout>
