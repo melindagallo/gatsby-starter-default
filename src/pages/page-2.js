@@ -22,6 +22,7 @@ class ToggleButton extends React.Component {
     onClick={this.toggle.bind(this)}>
     Change color 
   </button>
+    <p className={this.state.color ? 'display' : 'nodisplay'} >Another thingy</p>
   )
 }
 
