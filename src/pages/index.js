@@ -5,7 +5,17 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
+class IndexPage extends React.Component {
+   constructor(props) {
+   super(props);
+   this.state = {
+     color: true
+   };
+  }
+  toggle = () => {
+    this.setState({ color: !this.state.color });
+  }
+  render = () => (
   <Layout>
     <Seo title="Home" />
     <h1>Hi people</h1>
@@ -23,7 +33,10 @@ const IndexPage = () => (
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p>
+     <p>This is my {this.state.color ? 'Red' : 'Blue'} book.</p>
+        <button type="button" onClick={this.toggle.bind(this)}>Change color</button>
+
   </Layout>
 )
-
+}
 export default IndexPage
