@@ -5,27 +5,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-class ToggleButton extends React.Component {
-   constructor(props) {
-   super(props);
-   this.state = {
-     color: true
-   }
-  }
-  
-  toggle = () => {
-    this.setState({ color: !this.state.color });
-  }
-  render = props => (
-    <p>The color is {this.state.color ? 'Red' : 'Blue'} </p>
-  <button type="button" 
-    className={this.state.color ? 'Red' : 'Blue'}
-    onClick={this.toggle.bind(this)}>
-    Change color 
-  </button>
-  )
-}
-
 
 const Faqs extends React.Component {
    constructor(props) {
