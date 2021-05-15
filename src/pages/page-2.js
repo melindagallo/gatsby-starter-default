@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 
-class ToggleButton extends React.Component {
+/*class ToggleButton extends React.Component {
    constructor(props) {
    super(props);
    this.state = {
@@ -24,9 +24,36 @@ class ToggleButton extends React.Component {
    </button>
   )
 }
+*/
 
+const SecondPage = () => (
+  const [state, setState] = useState({
+    visible: false,
+  });
 
-const SecondPage = (props) => (
+  const toggleVisibility = () => {
+    setState({
+      ...state,
+      visible: !state.visible,
+    });
+  };
+  return (
+  <Layout>
+    <Seo title="Page two" />
+    <h1>Hi from the second page</h1>
+    <p>Welcome to page 2 - ANOTHER TEST</p>
+     <p className={state.visible ? 'faqbutton' : 'faqbutton active'}>Test the text</p>
+     <p>
+        <button onClick={toggleVisibility} type="button">
+          Solutions
+        </button>
+   </p>
+    <Link to="/">Go back to the homepage</Link>
+  </Layout>
+  );
+};
+
+/*
   <Layout>
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
@@ -35,5 +62,6 @@ const SecondPage = (props) => (
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
+*/
 
 export default SecondPage
