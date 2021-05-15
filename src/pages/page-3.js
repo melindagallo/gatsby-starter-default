@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 
-const Faqs extends React.Component {
+class Faqs extends React.Component {
    constructor(props) {
    super(props);
    this.state = {
