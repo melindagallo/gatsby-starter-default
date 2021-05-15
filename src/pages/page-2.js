@@ -36,5 +36,6 @@ const SecondPage = (props) => (
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
+}
 
 export default SecondPage
