@@ -13,10 +13,10 @@ class ToggleButton extends React.Component {
    }
   }
   
-  toggle = (props) => {
+  toggle = () => {
     this.setState({ color: !this.state.color });
   }
-  render = (props) => (
+  render = () => (
     <button type="button" 
     className={this.state.color ? 'Mine Red' : 'Mine Blue'}
     onClick={this.toggle.bind(this)}>
