@@ -23,7 +23,7 @@ class ToggleButton extends React.Component {
     Expand or Collapse Button 
    </button>
   )
-
+}
 
 
 const SecondPage = (props) => (
@@ -34,6 +34,6 @@ const SecondPage = (props) => (
     <ToggleButton />
   </Layout>
 )
-}
+
 
 export default SecondPage
