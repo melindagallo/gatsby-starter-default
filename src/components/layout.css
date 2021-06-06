@@ -595,3 +595,56 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+
+.bar {
+  width: 340px;
+  height: 6px;
+  background: #8955C6;
+  position: relative;
+  animation: growbar 3s;
+  border-radius: 90px;
+  top: -2px;
+  animation-delay: 2s; 
+}
+
+@keyframes growbar {
+  from {width: 0px;}
+  to {width: 340px;}
+}
+.bgbar {
+	background: #ccc;
+  	width: 350px;
+    height: 2px;
+    z-index:-1;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 99;
+  inherits: false;
+}
+
+.mycounterdiv {
+  animation: mycounter 5s alternate ease-in-out;
+  counter-reset: num var(--num);
+  font: 800 40px system-ui;
+  padding: 2rem;
+}
+mycounterdiv::after {
+  content: mycounter(num);
+}
+
+@keyframes mycounter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 99;
+  }
+}
+
+
+
+
