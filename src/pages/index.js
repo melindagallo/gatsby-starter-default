@@ -36,10 +36,10 @@ class IndexPage extends React.Component {
      <p>This is my {this.state.color ? 'Red' : 'Blue'} book.</p>
         <button type="button" onClick={this.toggle.bind(this)}>Change color</button>
 
-<div class="mycounterdiv"></div>
+<div className="mycounterdiv"></div>
 
-<div class="bgbar"><div class="bar"></div></div>
-
+<div className="bgbar"><div className="bar"></div></div>
+<p>This is my test above</p>
   </Layout>
 )
 }
